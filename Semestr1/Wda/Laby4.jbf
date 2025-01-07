@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="ZTM 47C1" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="Start">
+    <canvas interval="1" posX="-40.0" posY="44.652405" zoom="3"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>Start</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-140.0" posY="210.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-40.0"/>
+        <content>var x=ReadNumber("Podaj x");;	var y=ReadNumber("Podaj y");</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="40.0"/>
+        <content>y&gt;x</content>
+        <connect ID="5" value="true"/>
+        <connect ID="7" value="false"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="130.0"/>
+        <content>var change =y;&#13;;	y =x;&#13;;	x=change;</content>
+        <connect ID="6"/>
+      </block>
+      <block id="6" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="160.0" posY="130.0"/>
+        <content>var iloczyn =0;</content>
+        <connect ID="8"/>
+      </block>
+      <block id="7" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="160.0" posY="40.0"/>
+        <content> </content>
+        <connect ID="6"/>
+      </block>
+      <block id="8" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="160.0" posY="210.0"/>
+        <content>y!=0</content>
+        <connect ID="9" value="true"/>
+        <connect ID="12" value="false"/>
+      </block>
+      <block id="9" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="160.0" posY="280.0"/>
+        <content>y--;&#13;;	iloczyn+=x;</content>
+        <connect ID="10"/>
+      </block>
+      <block id="10" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="240.0" posY="280.0"/>
+        <content> </content>
+        <connect ID="11"/>
+      </block>
+      <block id="11" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="240.0" posY="210.0"/>
+        <content> </content>
+        <connect ID="8"/>
+      </block>
+      <block id="12" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="10.0" posY="210.0"/>
+        <content>Writeln("iloczyn: "+iloczyn)</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="b">
+    <canvas interval="1" posX="-533.629" posY="-269.67352" zoom="4"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>b</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="310.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="0.0"/>
+        <content>var x;&#13;;	var y;&#13;;	var iloczyn;&#13;;	x=ReadNumber("Podaj x");&#13;;	y=ReadNumber("Podaj y");</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="120.0"/>
+        <content>y&gt;x</content>
+        <connect ID="5" value="true"/>
+        <connect ID="7" value="false"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="200.0"/>
+        <content>var change =y;&#13;;	y =x;&#13;;	x=change;</content>
+        <connect ID="6"/>
+      </block>
+      <block id="6" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="140.0" posY="200.0"/>
+        <content>iloczyn=0;&#13;;	</content>
+        <connect ID="8"/>
+      </block>
+      <block id="7" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="140.0" posY="120.0"/>
+        <content> </content>
+        <connect ID="6"/>
+      </block>
+      <block id="8" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="140.0" posY="310.0"/>
+        <content>y!=0</content>
+        <connect ID="10" value="true"/>
+        <connect ID="9" value="false"/>
+      </block>
+      <block id="9" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="40.0" posY="310.0"/>
+        <content>Writeln(iloczyn);</content>
+        <connect ID="2"/>
+      </block>
+      <block id="10" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="140.0" posY="420.0"/>
+        <content>(y&amp;1)==0;</content>
+        <connect ID="11" value="true"/>
+        <connect ID="12" value="false"/>
+      </block>
+      <block id="11" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="140.0" posY="520.0"/>
+        <content>y = floor(y/2);&#13;;	x=x+x;&#13;;	</content>
+        <connect ID="13"/>
+      </block>
+      <block id="12" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="250.0" posY="420.0"/>
+        <content> </content>
+        <connect ID="15"/>
+      </block>
+      <block id="13" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="40.0" posY="520.0"/>
+        <content> </content>
+        <connect ID="14"/>
+      </block>
+      <block id="14" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="40.0" posY="420.0"/>
+        <content> </content>
+        <connect ID="10"/>
+      </block>
+      <block id="15" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="250.0" posY="310.0"/>
+        <content>iloczyn+=x;&#13;;	y--;</content>
+        <connect ID="8"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="3a">
+    <canvas interval="200" posX="0.0" posY="-125.10486" zoom="3"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>3a</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="210.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-40.0"/>
+        <content>var kolekcja=[4,7,10,12,-9,5];;	var koniec =kolekcja.length;;	var i=0;</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="40.0"/>
+        <content>i!=koniec;</content>
+        <connect ID="5" value="true"/>
+        <connect ID="8" value="false"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="120.0"/>
+        <content>Writeln(i+" Element to " +kolekcja[i]);;	i++;;	</content>
+        <connect ID="6"/>
+      </block>
+      <block id="6" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="200.0" posY="120.0"/>
+        <content> </content>
+        <connect ID="7"/>
+      </block>
+      <block id="7" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="200.0" posY="40.0"/>
+        <content> </content>
+        <connect ID="4"/>
+      </block>
+      <block id="8" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-180.0" posY="40.0"/>
+        <content> </content>
+        <connect ID="9"/>
+      </block>
+      <block id="9" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-180.0" posY="210.0"/>
+        <content> </content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="3b">
+    <canvas interval="1" posX="110.0" posY="-122.5" zoom="2"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>3b</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-120.0" posY="30.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-40.0"/>
+        <content>var kolekcja=[4,7,10,12,-9,5];;	var koniec =kolekcja.length;;	</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="30.0"/>
+        <content>koniec!=0;</content>
+        <connect ID="5" value="true"/>
+        <connect ID="2" value="false"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="110.0"/>
+        <content>var a=kolekcja.shift();;	Writeln(a);;	koniec=kolekcja.length;</content>
+        <connect ID="6"/>
+      </block>
+      <block id="6" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="120.0" posY="110.0"/>
+        <content> </content>
+        <connect ID="7"/>
+      </block>
+      <block id="7" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="120.0" posY="30.0"/>
+        <content> </content>
+        <connect ID="4"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="4">
+    <canvas interval="200" posX="-477.35333" posY="-225.66898" zoom="4"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>4</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-460.0" posY="70.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-50.0"/>
+        <content>var lista=[2,4,"Ala",10,"ma","koty",true,false];;	var koniec =lista.length;;	var i=0;;	var suma=0;;	var napis=""; ;	var boole=0;</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="70.0"/>
+        <content>i!==koniec&#13;;	</content>
+        <connect ID="5" value="true"/>
+        <connect ID="18" value="false"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="170.0"/>
+        <content>a=typeof(lista[i]);</content>
+        <connect ID="6"/>
+      </block>
+      <block id="6" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="150.0" posY="170.0"/>
+        <content>a=="number";</content>
+        <connect ID="7" value="true"/>
+        <connect ID="8" value="false"/>
+      </block>
+      <block id="7" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="150.0" posY="240.0"/>
+        <content>suma+=lista[i];</content>
+        <connect ID="14"/>
+      </block>
+      <block id="8" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="300.0" posY="170.0"/>
+        <content>a=="string";</content>
+        <connect ID="9" value="true"/>
+        <connect ID="10" value="false"/>
+      </block>
+      <block id="9" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="300.0" posY="240.0"/>
+        <content>napis+=" "+lista[i];</content>
+        <connect ID="13"/>
+      </block>
+      <block id="10" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="420.0" posY="170.0"/>
+        <content>a=="boolean";</content>
+        <connect ID="11" value="true"/>
+      </block>
+      <block id="11" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="420.0" posY="240.0"/>
+        <content>boole++;</content>
+        <connect ID="12"/>
+      </block>
+      <block id="12" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="420.0" posY="320.0"/>
+        <content> </content>
+        <connect ID="15"/>
+      </block>
+      <block id="13" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="300.0" posY="320.0"/>
+        <content> </content>
+        <connect ID="12"/>
+      </block>
+      <block id="14" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="150.0" posY="320.0"/>
+        <content> </content>
+        <connect ID="13"/>
+      </block>
+      <block id="15" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="530.0" posY="320.0"/>
+        <content> </content>
+        <connect ID="16"/>
+      </block>
+      <block id="16" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="530.0" posY="70.0"/>
+        <content> </content>
+        <connect ID="17"/>
+      </block>
+      <block id="17" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="490.0" posY="70.0"/>
+        <content>i++;</content>
+        <connect ID="4"/>
+      </block>
+      <block id="18" type="IO">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-250.0" posY="70.0"/>
+        <content>Writeln("Suma liczb w tej kolekcji to "+suma);&#13;;	Writeln("Połączony tekst "+napis);&#13;;	Writeln("Ilość boolei to "+boole);</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="5">
+    <canvas interval="1" posX="-277.79388" posY="-26.744713" zoom="5"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-150.0"/>
+        <comment>5</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-500.0" posY="60.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-50.0"/>
+        <content>var kolekcja =[4,7,10,12,-9,5,8,12,11,1,3,13,5,9,2,6,14];;	var koniec =kolekcja.length;;	var parzyste=[];;	var nieparzyste=[];;	var a=0;;	var i=0;</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="60.0"/>
+        <content>koniec!==0</content>
+        <connect ID="5" value="true"/>
+        <connect ID="13" value="false"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="150.0"/>
+        <content>a=kolekcja.shift();</content>
+        <connect ID="6"/>
+      </block>
+      <block id="6" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="220.0"/>
+        <content>a%2==0</content>
+        <connect ID="7" value="true"/>
+        <connect ID="8" value="false"/>
+      </block>
+      <block id="7" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="290.0"/>
+        <content>parzyste.push(a);</content>
+        <connect ID="9"/>
+      </block>
+      <block id="8" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="180.0" posY="220.0"/>
+        <content>nieparzyste.push(a);</content>
+        <connect ID="9"/>
+      </block>
+      <block id="9" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="180.0" posY="290.0"/>
+        <content> </content>
+        <connect ID="10"/>
+      </block>
+      <block id="10" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="330.0" posY="290.0"/>
+        <content> </content>
+        <connect ID="12"/>
+      </block>
+      <block id="11" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="330.0" posY="60.0"/>
+        <content> </content>
+        <connect ID="4"/>
+      </block>
+      <block id="12" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="330.0" posY="150.0"/>
+        <content> koniec =kolekcja.length;</content>
+        <connect ID="11"/>
+      </block>
+      <block id="13" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-230.0" posY="60.0"/>
+        <content>Writeln("Liczby parzyste "+parzyste);;	Writeln("Liczby nieparzyste "+nieparzyste);</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>

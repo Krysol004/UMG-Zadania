@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="ZTM 47C1" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="Start">
+    <canvas interval="10" posX="-190.20131" posY="21.553757" zoom="4"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>Start</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="200.0" posY="150.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-40.0"/>
+        <content>kol=[3,5,7,10,1,12]&#13;;	n=4</content>
+        <connect ID="8"/>
+      </block>
+      <block id="4" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="80.0"/>
+        <content>((n&gt;0)&amp;&amp;(kol[n-1]&gt;kol[n]))</content>
+        <connect ID="5" value="true"/>
+        <connect ID="7" value="false"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="230.0"/>
+        <content>x=kol[n-1]&#13;;	kol[n-1]=kol[n]&#13;;	kol[n]=x&#13;;	n--</content>
+        <connect ID="9"/>
+      </block>
+      <block id="7" type="IO">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="200.0" posY="80.0"/>
+        <content>Write(kol);</content>
+        <connect ID="2"/>
+      </block>
+      <block id="8" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="10.0"/>
+        <content> </content>
+        <connect ID="4"/>
+      </block>
+      <block id="9" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-120.0" posY="230.0"/>
+        <content> </content>
+        <connect ID="10"/>
+      </block>
+      <block id="10" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-120.0" posY="10.0"/>
+        <content> </content>
+        <connect ID="8"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="2">
+    <canvas interval="10" posX="-294.76495" posY="-125.34264" zoom="4"/>
+    <blocks>
+      <block id="0" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>2</comment>
+        <connect ID="2"/>
+      </block>
+      <block id="1" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="210.0" posY="250.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="2" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="20.0"/>
+        <content>function zamien(n,m){&#13;;	x=kol[n]&#13;;	kol[n]=kol[m]&#13;;	kol[m]=x    &#13;;	}&#13;;	&#13;;	kol=[7,5,3,10,1,12]&#13;;	n=4</content>
+        <connect ID="4"/>
+      </block>
+      <block id="3" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="190.0"/>
+        <content>((n&gt;0)&amp;&amp;(kol[n-1]&gt;kol[n]))</content>
+        <connect ID="5" value="true"/>
+        <connect ID="6" value="false"/>
+      </block>
+      <block id="4" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="120.0"/>
+        <content> </content>
+        <connect ID="3"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="320.0"/>
+        <content>zamien(n-1,n);	n--</content>
+        <connect ID="7"/>
+      </block>
+      <block id="6" type="IO">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="210.0" posY="190.0"/>
+        <content>Write(kol)</content>
+        <connect ID="1"/>
+      </block>
+      <block id="7" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-130.0" posY="320.0"/>
+        <content> </content>
+        <connect ID="8"/>
+      </block>
+      <block id="8" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-130.0" posY="120.0"/>
+        <content> </content>
+        <connect ID="4"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="3">
+    <canvas interval="10" posX="-79.10651" posY="-236.0654" zoom="3"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>3</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="290.0" posY="290.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-30.0"/>
+        <content>kol=["Borkowski","Borkowski","Śliwiński","Turek","Kowalski","Żabczyński","Borowik"]&#13;;	n=6</content>
+        <connect ID="6"/>
+      </block>
+      <block id="4" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="220.0"/>
+        <content> </content>
+        <connect ID="5"/>
+      </block>
+      <block id="5" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="290.0"/>
+        <content>n&gt;0 &amp;&amp; porownanie(n)&gt;0</content>
+        <connect ID="7" value="true"/>
+        <connect ID="10" value="false"/>
+      </block>
+      <block id="6" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="110.0"/>
+        <content>function porownanie(n){;	    return kol[n-1].localeCompare(kol[n])};	;	function zamien(n,m){;	x=kol[n];	kol[n]=kol[m];	kol[m]=x    ;	}</content>
+        <connect ID="4"/>
+      </block>
+      <block id="7" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="430.0"/>
+        <content>zamien(n-1,n)&#13;;	n--</content>
+        <connect ID="8"/>
+      </block>
+      <block id="8" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-110.0" posY="430.0"/>
+        <content> </content>
+        <connect ID="9"/>
+      </block>
+      <block id="9" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-110.0" posY="220.0"/>
+        <content> </content>
+        <connect ID="4"/>
+      </block>
+      <block id="10" type="IO">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="200.0" posY="290.0"/>
+        <content>Write(kol)</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="4">
+    <canvas interval="10" posX="-74.84978" posY="-421.86273" zoom="4"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="60.0"/>
+        <comment>4</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-310.0" posY="430.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-70.0" posY="130.0"/>
+        <content>kol=["Borkowski","Borkowski","Śliwiński","Turek","Kowalski","Żabczyński","Borowik","Słowacki"]&#13;;	i=1&#13;;	koniec=kol.length</content>
+        <connect ID="6"/>
+      </block>
+      <block id="4" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-70.0" posY="370.0"/>
+        <content> </content>
+        <connect ID="5"/>
+      </block>
+      <block id="5" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-70.0" posY="430.0"/>
+        <content>i&lt;koniec</content>
+        <connect ID="7" value="true"/>
+        <connect ID="8" value="false"/>
+      </block>
+      <block id="6" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-70.0" posY="270.0"/>
+        <content>function porownanie(n){;	    return kol[n-1].localeCompare(kol[n])};	;	function zamien(n,m){;	x=kol[n];	kol[n]=kol[m];	kol[m]=x    ;	}</content>
+        <connect ID="4"/>
+      </block>
+      <block id="7" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-70.0" posY="540.0"/>
+        <content>n=i</content>
+        <connect ID="11"/>
+      </block>
+      <block id="8" type="IO">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-220.0" posY="430.0"/>
+        <content>Write(kol)</content>
+        <connect ID="2"/>
+      </block>
+      <block id="9" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-70.0" posY="660.0"/>
+        <content>n&gt;0 &amp;&amp; porownanie(n)&gt;0</content>
+        <connect ID="10" value="true"/>
+        <connect ID="13" value="false"/>
+      </block>
+      <block id="10" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-270.0" posY="660.0"/>
+        <content>zamien(n-1,n)&#13;;	n--</content>
+        <connect ID="12"/>
+      </block>
+      <block id="11" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-70.0" posY="580.0"/>
+        <content> </content>
+        <connect ID="9"/>
+      </block>
+      <block id="12" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-270.0" posY="580.0"/>
+        <content> </content>
+        <connect ID="11"/>
+      </block>
+      <block id="13" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="100.0" posY="660.0"/>
+        <content>i++</content>
+        <connect ID="15"/>
+      </block>
+      <block id="15" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="100.0" posY="370.0"/>
+        <content> </content>
+        <connect ID="4"/>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>
