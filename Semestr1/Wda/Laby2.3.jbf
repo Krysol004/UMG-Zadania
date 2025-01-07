@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="ZTM 47C1" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="Start">
+    <canvas interval="200" posX="-47.0" posY="-70.0" zoom="4"/>
+    <blocks>
+      <block id="0" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>Start</comment>
+        <connect ID="2"/>
+      </block>
+      <block id="1" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="220.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="2" type="IO">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-20.0"/>
+        <content>a =ReadNumber("Podaj a");&#13;;	b =ReadNumber("Podaj b");</content>
+        <connect ID="3"/>
+      </block>
+      <block id="3" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="50.0"/>
+        <content>a&gt;b</content>
+        <connect ID="5" value="true"/>
+        <connect ID="7" value="false"/>
+      </block>
+      <block id="4" type="IO">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="230.0" posY="220.0"/>
+        <content>Writeln("Niewłaściwie podane liczby")</content>
+        <connect ID="1"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="120.0"/>
+        <content>c=rand(a,b);</content>
+        <connect ID="6"/>
+      </block>
+      <block id="6" type="IO">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="170.0"/>
+        <content>Writeln(c+" to liczba z zakresu "+a+" do "+b);</content>
+        <connect ID="1"/>
+      </block>
+      <block id="7" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="230.0" posY="50.0"/>
+        <content> </content>
+        <connect ID="4"/>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>
